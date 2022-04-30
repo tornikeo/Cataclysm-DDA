@@ -22,6 +22,7 @@ bool acid_accurate( monster *z );
 bool acid_barf( monster *z );
 bool shockstorm( monster *z );
 bool shocking_reveal( monster *z );
+bool developer_rant( monster *z );
 bool pull_metal_weapon( monster *z );
 bool boomer( monster *z );
 bool boomer_glow( monster *z );

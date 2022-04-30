@@ -1430,5 +1430,25 @@
     "speaker": [ "mon_turret", "mon_mi_go", "mon_mi_go_slaver" ],
     "sound": "\"I'm gonna make you proud!\"",
     "volume": 30
+  },
+  {
+    "type": "snippet",
+    "category": "developer_rant",
+    "text": "I'm angry, because your whole email was so HORRIBLY wrong, and the patch that broke things was so obviously crap."
+  },
+  {
+    "type": "snippet",
+    "category": "developer_rant",
+    "text": "To make matters worse, commit f0ed2ce840b3 is clearly total and utter CRAP even if it didn't break applications."
+  },
+  {
+    "type": "snippet",
+    "category": "developer_rant",
+    "text": "NVIDIA, FUCK YOU!"
+  },
+  {
+    "type": "snippet",
+    "category": "developer_rant",
+    "text": "If Red Hat wants to deep-throat Microsoft, that's *your* issue!"
   }
 ]

@@ -892,6 +892,16 @@ bool mattack::shocking_reveal( monster *z )
     return true;
 }
 
+bool mattack::developer_rant( monster *z )
+{
+    const translation rant = SNIPPET.random_from_category( "developer_rant" ).value_or(
+                                         translation() );
+    sounds::sound( z->pos(), 10, sounds::sound_t::alert,
+                   string_format( _( "the %s yelling \"%s\"" ),
+                                  z->name(), rant ) );
+    return true;
+}
+
 bool mattack::pull_metal_weapon( monster *z )
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////
