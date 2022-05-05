@@ -1,0 +1,3 @@
+|;id;duration;intensity;perm;bp
+|;hunger_very_hungry;1 day;1;true;bp_null
+|;glare;2 seconds;1;false;bp_null

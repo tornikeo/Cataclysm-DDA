@@ -859,7 +859,17 @@
       }
     ],
     "type_weights": [ { "weight": 100, "value": "passive_enchantment_mult" }, { "weight": 50, "value": "passive_enchantment_add" } ],
-    "items": [ { "weight": 100, "item": "monolith_disc" }, { "weight": 100, "item": "monolith_brick" } ]
+    "items": [
+      { "weight": 100, "item": "monolith_disc" },
+      { "weight": 100, "item": "monolith_brick" },
+      { "weight": 100, "item": "monolith_crystal_blob" },
+      { "weight": 100, "item": "monolith_breathing_mask" },
+      { "weight": 100, "item": "monolith_injector" },
+      { "weight": 100, "item": "monolith_gun_mag" },
+      { "weight": 100, "item": "monolith_scope" },
+      { "weight": 100, "item": "monolith_rag" },
+      { "weight": 100, "item": "monolith_flesh_pearl_off" }
+    ]
   },
   {
     "type": "relic_procgen_data",
