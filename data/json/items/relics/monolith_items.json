@@ -21,5 +21,117 @@
     "material": [ "monolith" ],
     "weight": "28 kg",
     "volume": "1 L"
+  },
+  {
+    "type": "GENERIC",
+    "id": "monolith_crystal_blob",
+    "symbol": "o",
+    "color": "black",
+    "name": { "str": "crystalline blob" },
+    "//": "this is a shrapnel from an alien explosive device.  It absorbs all radiation.  It's a shere with half side covered in spikes.",
+    "description": "This item looks like a hole in reality.  It is utterly black and has no discernible features.  As you feel your way around the object, you can distinctly feel smooth and incredibly sharp areas.",
+    "material": [ "monolith" ],
+    "weight": "230 g",
+    "volume": "510 ml",
+    "longest_side": "22 cm"
+  },
+  {
+    "type": "GENERIC",
+    "id": "monolith_breathing_mask",
+    "symbol": "T",
+    "color": "red",
+    "name": { "str": "slimy tangle" },
+    "//": "this is a discarded alien (migo?) breathing apparatus.  Looks like half a human ribcage or a facehugger.  It is organic.",
+    "description": "This is a slimy mess of red, glistening tubes sprouting out of a black, spinelike rod.  As you carefully examine the item, you feel the tubes reaching for your uncovered skin.",
+    "material": [ "monolith" ],
+    "weight": "3 kg",
+    "volume": "2 L",
+    "longest_side": "30 cm"
+  },
+  {
+    "type": "GENERIC",
+    "id": "monolith_injector",
+    "symbol": "S",
+    "color": "dark_red",
+    "name": { "str": "leech" },
+    "//": "this is a discarded nutrient/stim injector of alien origins.  It is also organic.",
+    "description": "This looks like a slimy red worm.  It feels empty and squishy when examined with your tools, as you try to touch it, however, it immediately stiffens and starts sweating from one end.",
+    "material": [ "monolith" ],
+    "weight": "50 g",
+    "volume": "300 ml",
+    "longest_side": "6 cm"
+  },
+  {
+    "type": "GENERIC",
+    "id": "monolith_gun_mag",
+    "symbol": "U",
+    "color": "dark_red",
+    "name": { "str": "empty sac" },
+    "//": "this is a discarded migo scout gun mag.",
+    "description": "On the outside, this looks like a slimy flesh sac.  The inside, however, is so utterly black that you can't discern any features.  As you try squeezing the sac, it emits an uneathly screech.  Its volume suggests whatever it was supposed to hold is no more.",
+    "material": [ "monolith" ],
+    "weight": "500 g",
+    "volume": "700 ml",
+    "longest_side": "6 cm"
+  },
+  {
+    "type": "GENERIC",
+    "id": "monolith_scope",
+    "symbol": "X",
+    "color": "yellow",
+    "name": { "str": "angel wings" },
+    "//": "this is migo gun visual enhancer (a scope).  It will partially functional and will burn your eyes if you are not careful. ",
+    "description": "Two bright yellow crystals the size of your fist, separated by a milimeter of empty space.  As you look at the central empty space, you suddenly feel a burning sensation inside your eyes.",
+    "material": [ "monolith" ],
+    "weight": "500 g",
+    "volume": "400 ml",
+    "longest_side": "6 cm"
+  },
+  {
+    "type": "GENERIC",
+    "id": "monolith_rag",
+    "symbol": "#",
+    "color": "dark_red",
+    "name": { "str": "snake skin" },
+    "//": "this is a rag from an undergarment.  It is conscious and self-molds into shapes as it sees fit.  Not organic.",
+    "description": "This is a piece of flexible, black skin.  As you look at it from different angles you notice its covered in scales.  The skin is incredibly tough and tries to form shapes...  is that your face?",
+    "material": [ "monolith" ],
+    "weight": "500 g",
+    "volume": "400 ml",
+    "longest_side": "6 cm"
+  },
+  {
+    "type": "ARMOR",
+    "id": "monolith_flesh_pearl_off",
+    "symbol": ".",
+    "color": "white",
+    "name": { "str": "flesh pearl" },
+    "//": "a source of ignition or illumination of sort.  for the survivor, it's a near-infinite light source.",
+    "description": "This looks like a smallish pearl.  However, as you try to touch it you feel its uncomfortable squishiness and a faint glow coming from the center.  It is covered in extremely strong, sticky substance.  You could use probably use this as a light source.",
+    "material": [ "monolith" ],
+    "weight": "30 g",
+    "volume": "5 ml",
+    "longest_side": "1 cm",
+    "price_postapoc": 4500,
+    "use_action": {
+      "target": "monolith_flesh_pearl_on",
+      "msg": "You squeeze the flesh pearl.",
+      "menu_text": "Squeeze",
+      "type": "transform"
+    },
+    "flags": [ "ALLOWS_NATURAL_ATTACKS", "OUTER", "OVERSIZE", "WATER_FRIENDLY" ]
+  },
+  {
+    "id": "monolith_flesh_pearl_on",
+    "copy-from": "monolith_flesh_pearl_off",
+    "name": { "str": "flesh pearl (glowing)", "str_pl": "flesh pearls (glowing)" },
+    "description": "This flesh pearl is glowing brightly.  Will it ever run out?",
+    "use_action": {
+      "target": "monolith_flesh_pearl_off",
+      "msg": "You squeeze the flesh pearl.",
+      "menu_text": "Squeeze",
+      "type": "transform"
+    },
+    "flags": [ "LIGHT_200", "ALLOWS_NATURAL_ATTACKS", "OUTER", "OVERSIZE", "WATER_FRIENDLY" ]
   }
 ]
