@@ -518,6 +518,7 @@ Some armor flags, such as `WATCH` and `ALARMCLOCK` are compatible with other ite
 - ```VITAMINS``` Increases healthiness (not to be confused with HP).
 - ```WEED``` Makes you roll with Cheech & Chong. Adds disease `weed_high`.
 - ```XANAX``` Alleviates anxiety. Adds disease `took_xanax`.
+- ```FORBIDDEN_FRUIT``` If char is spiritual removes the trait, adds morale debuff and replaces all character's apparel with a single fig leaf. Else adds experience in a random skill.
 
 ### Flags
 

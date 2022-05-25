@@ -516,6 +516,49 @@ cata::optional<int> iuse::xanax( Character *p, item *it, bool, const tripoint & 
     return it->type->charges_to_use();
 }
 
+
+cata::optional<int> iuse::forbidden_fruit( Character *p, item *it, bool t, const tripoint & )
+{
+    if( !p || t ) {
+        return cata::nullopt;
+    }
+
+    p->add_msg_if_player( _( "You eat the %s." ), it->tname() );
+
+    if( p->has_trait( trait_SPIRITUAL ) ) {
+        // remove all worn items
+        p->remove_worn_items_with( [&]( item & armor ) {
+            if( armor.has_flag( STATIC( flag_id( "OVERSIZE" ) ) ) ) {
+                return false;
+            }
+            if( armor.has_flag( STATIC( flag_id( "INTEGRATED" ) ) ) ) {
+                return false;
+            }
+
+            p->add_msg_player_or_npc( m_bad,
+                                      _( "Your %s is destroyed!" ),
+                                      _( "<npcname>'s %s is destroyed!" ),
+                                      armor.tname() );
+            armor.spill_contents( p->pos() );
+            return true;
+        } );
+
+
+        sounds::sound( p->pos() + tripoint( 0, 0, 1 ), 150, sounds::sound_t::alarm,
+                       _( "\"WHAT HAVE YOU DONE?!\"" ), false,
+                       "misc" );
+
+        item figleaf( itype_id( "fig_leaf_loincloth" ) );
+        p->wear_item( figleaf, false );
+        p->add_morale( MORALE_FORBIDDEN_FRUIT, -60, -400, 1_days, 12_hours );
+        p->remove_mutation( trait_SPIRITUAL );
+    } else {
+        p->add_msg_if_player( _( "But nothing happens." ) );
+    }
+
+    return it->type->charges_to_use();
+}
+
 static constexpr time_duration alc_strength( const int strength, const time_duration &weak,
         const time_duration &medium, const time_duration &strong )
 {

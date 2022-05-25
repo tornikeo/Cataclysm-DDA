@@ -1,0 +1,17 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "absurd_days_ahead",
+    "name": "Absurd Days Ahead",
+    "authors": [ "TornikeO" ],
+    "description": "Like Crazy Cataclysm - on steroids.  It has Snake Oil™, Bedxplosion™ and Zombags™.",
+    "category": "misc_additions",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "EXTERNAL_OPTION",
+    "name": "ABSURD",
+    "stype": "bool",
+    "value": true
+  }
+]

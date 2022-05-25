@@ -1,0 +1,10 @@
+[
+  {
+    "type": "effect_type",
+    "id": "snake_oil",
+    "name": [ "Snake Oil™" ],
+    "desc": [ "YOU. FEEL. INCREDIBLE!" ],
+    "max_duration": "2 s",
+    "base_mods": { "str_mod": [ 99 ], "dex_mod": [ 99 ], "int_mod": [ -99 ], "per_mod": [ 99 ] }
+  }
+]
