@@ -1,0 +1,14 @@
+[
+  {
+    "id": "snake_oil_flask",
+    "type": "GENERIC",
+    "category": "container",
+    "copy-from": "flask_glass",
+    "name": { "str": "Snake Oil™ flask" },
+    "looks_like": "bottle_glass",
+    "description": "A proprietary dark green Snake Oil™ flask sealed with a wooden cork.",
+    "material": [ "glass", "wood" ],
+    "symbol": "i",
+    "color": "brown_green"
+  }
+]

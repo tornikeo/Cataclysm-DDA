@@ -63,6 +63,7 @@ cata::optional<int> thorazine( Character *, item *, bool, const tripoint & );
 cata::optional<int> vaccine( Character *, item *, bool, const tripoint & );
 cata::optional<int> weed_cake( Character *, item *, bool, const tripoint & );
 cata::optional<int> xanax( Character *, item *, bool, const tripoint & );
+cata::optional<int> forbidden_fruit( Character *, item *, bool, const tripoint & );
 
 // TOOLS
 cata::optional<int> acidbomb_act( Character *, item *, bool, const tripoint & );

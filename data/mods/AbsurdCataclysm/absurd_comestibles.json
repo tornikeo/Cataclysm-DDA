@@ -1,0 +1,21 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "forbidden_fruit",
+    "name": { "str": "delicious apple" },
+    "weight": "182 g",
+    "color": "red",
+    "spoils_in": "6 days 6 hours 6 minutes",
+    "comestible_type": "FOOD",
+    "symbol": "🍎",
+    "quench": 10,
+    "calories": 201,
+    "description": "This apple looks extremely delicious. Surely eating it wouldn't upset the guy in the sky.",
+    "price": 900,
+    "price_postapoc": 2000,
+    "material": [ "fruit" ],
+    "volume": "375 ml",
+    "fun": 99,
+    "use_action": [ "FORBIDDEN_FRUIT" ]
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "mon_rattlesnake",
+    "type": "MONSTER",
+    "copy-from": "mon_rattlesnake",
+    "name": { "str": "danger noodle" },
+    "description": "The timber rattlesnake, the most venomous viper native to New England.  Climatic changes have extended its range far into the north.  You could hunt it for some Snake Oil™ and scales!",
+    "harvest": "danger_noodle",
+    "dissect": "dissect_lizard_sample_single",
+    "special_attacks": [ [ "RATTLE", 6 ] ],
+    "death_drops": "mon_rattlesnake_death_drops",
+    "upgrades": { "half_life": 14, "into": "mon_rattlesnake_giant" },
+    "flags": [ "SEES", "HEARS", "SMELLS", "BADVENOM", "HARDTOSHOOT", "SWIMS" ]
+  }
+]

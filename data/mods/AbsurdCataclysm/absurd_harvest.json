@@ -1,0 +1,12 @@
+[
+  {
+    "id": "danger_noodle",
+    "//": "You can harvest scales from a snake. Don't question it.",
+    "type": "harvest",
+    "entries": [
+      { "drop": "balance_small", "type": "bone", "scale_num": [ 1, 1 ] },
+      { "drop": "meat_scrap", "type": "flesh", "mass_ratio": 0.5 },
+      { "drop": "animal_blood", "type": "blood", "mass_ratio": 0.1 }
+    ]
+  }
+]

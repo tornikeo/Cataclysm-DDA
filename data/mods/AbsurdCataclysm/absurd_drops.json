@@ -1,0 +1,15 @@
+[
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "mon_rattlesnake_death_drops",
+    "entries": [
+      {
+        "collection": [
+          { "item": "snake_oil", "prob": 100, "container-item": "snake_oil_flask", "sealed": true },
+          { "item": "forbidden_apple", "prob": 100, "count": 2 }
+        ]
+      }
+    ]
+  }
+]

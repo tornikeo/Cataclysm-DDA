@@ -1,0 +1,7 @@
+[
+  {
+    "type": "item_action",
+    "id": "FORBIDDEN_FRUIT",
+    "name": { "str": "Eat thee" }
+  }
+]

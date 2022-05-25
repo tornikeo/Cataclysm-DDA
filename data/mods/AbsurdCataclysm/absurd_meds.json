@@ -1,0 +1,24 @@
+[
+  {
+    "id": "snake_oil",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "copy-from": "panacea",
+    "name": { "str": "Snake Oil™", "str_pl": "Snake Oilsss™" },
+    "description": "A viscous opaque yellow liquid.  It can cure any earthly disease (including boneitis) and reverse aging.  Its overconsumption has led to a rapid decline in snake population accross the world.",
+    "weight": "250 g",
+    "volume": "250 ml",
+    "price": 10000,
+    "price_postapoc": 2000,
+    "symbol": "s",
+    "color": "yellow",
+    "container": "snake_oil_flask",
+    "phase": "liquid",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "That wasss ASSSTOUNDING!",
+      "effects": [ { "id": "snake_oil", "duration": "2 s" } ]
+    },
+    "flags": [ "NPC_SAFE", "WATER_DISSOLVE", "EDIBLE_FROZEN" ]
+  }
+]

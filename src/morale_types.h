@@ -64,6 +64,7 @@ extern const morale_type MORALE_CRAVING_DIAZEPAM;
 extern const morale_type MORALE_CRAVING_MARLOSS;
 extern const morale_type MORALE_FOOD_BAD;
 extern const morale_type MORALE_CANNIBAL;
+extern const morale_type MORALE_FORBIDDEN_FRUIT;
 extern const morale_type MORALE_VEGETARIAN;
 extern const morale_type MORALE_MEATARIAN;
 extern const morale_type MORALE_ANTIFRUIT;

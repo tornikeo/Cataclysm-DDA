@@ -971,6 +971,11 @@
   },
   {
     "type": "item_action",
+    "id": "FORBIDDEN_FRUIT",
+    "name": { "str": "Eat thee" }
+  },
+  {
+    "type": "item_action",
     "id": "ammobelt",
     "name": { "str": "Reload" }
   },

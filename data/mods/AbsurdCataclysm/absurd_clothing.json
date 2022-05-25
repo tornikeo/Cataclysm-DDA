@@ -1,0 +1,19 @@
+[
+  {
+    "id": "fig_leaf_loincloth",
+    "type": "ARMOR",
+    "name": { "str": "loincloth" },
+    "description": "A huge fig leaf that sticks to your skin.  Covers your modesty, but not much else.",
+    "weight": "32 g",
+    "volume": "250 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "paper" ],
+    "symbol": "[",
+    "looks_like": "briefs",
+    "color": "green",
+    "material_thickness": 0.2,
+    "flags": [ "VARSIZE", "SKINTIGHT", "OVERSIZE" ],
+    "armor": [ { "coverage": 15, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
+  }
+]
