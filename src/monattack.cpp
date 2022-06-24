@@ -5029,7 +5029,7 @@ bool mattack::riotbot( monster *z )
 
         amenu.addentry( ur_arrest, true, 'a', _( "Allow yourself to be arrested." ) );
         amenu.addentry( ur_resist, true, 'r', _( "Resist arrest!" ) );
-        // /\EFFECT_INT >10 allows and increases chance whether you can feign death to avoid riot bot arrest
+        ///\EFFECT_INT >10 allows and increases chance whether you can feign death to avoid riot bot arrest
         if( foe->int_cur > 12 || ( foe->int_cur > 10 && !one_in( foe->int_cur - 8 ) ) ) {
             amenu.addentry( ur_trick, true, 't', _( "Feign death." ) );
         }
@@ -5049,7 +5049,7 @@ bool mattack::riotbot( monster *z )
             const bool is_uncanny = foe->has_active_bionic( bio_uncanny_dodge ) &&
                                     foe->get_power_level() > bio_uncanny_dodge.obj().power_trigger &&
                                     !one_in( 3 );
-            // /\EFFECT_DEX >13 allows and increases chance to slip out of handcuffs
+            ///\EFFECT_DEX >13 allows and increases chance to slip out of handcuffs
             const bool is_dex = foe->dex_cur > 13 && !one_in( foe->dex_cur - 11 );
 
             if( is_uncanny || is_dex ) {
@@ -5087,7 +5087,7 @@ bool mattack::riotbot( monster *z )
 
         if( choice == ur_trick ) {
 
-            // /\EFFECT_INT >10 allows and increases chance of successful feign death 
+            ///\EFFECT_INT >10 allows and increases chance of successful feign death
             if( !one_in( foe->int_cur - 10 ) ) {
 
                 add_msg( m_good,
