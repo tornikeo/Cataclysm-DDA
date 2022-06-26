@@ -810,7 +810,7 @@
     "category": [ "MOUSE", "LUPINE" ],
     "starting_trait": true,
     "active": true,
-    "stomach_size_multiplier": 2.0
+    "stomach_size_multiplier": 200.0
   },
   {
     "type": "mutation",

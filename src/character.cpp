@@ -4101,7 +4101,7 @@ void Character::mod_thirst( int nthirst )
     if( has_flag( json_flag_NO_THIRST ) || !needs_food() ) {
         return;
     }
-    set_thirst( std::max( -100, thirst + nthirst ) );
+    set_thirst( std::max( -1000, thirst + nthirst ) );
 }
 
 void Character::set_thirst( int nthirst )

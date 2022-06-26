@@ -91,6 +91,8 @@
 # Disable building and running tests.
 # make RUNTESTS=0
 
+# make -j4 CCACHE=1 TILES=1 RELEASE=1 USE_HOME_DIR=1 RUNTESTS=0 LINTJSON=0 ASTYLE=0
+
 # comment these to toggle them as one sees fit.
 # DEBUG is best turned on if you plan to debug in gdb -- please do!
 # PROFILE is for use with gprof or a similar program -- don't bother generally.
@@ -111,7 +113,7 @@ WARNINGS = \
   -Wzero-as-null-pointer-constant \
   -Wno-unknown-warning-option
 # Uncomment below to disable warnings
-#WARNINGS = -w
+WARNINGS = -w
 DEBUGSYMS = -g
 #PROFILE = -pg
 #OTHERS = -O3

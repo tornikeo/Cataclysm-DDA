@@ -112,7 +112,7 @@ static bool isWide = false;
 #define COL_NOTE_MINOR      c_light_gray  // Just regular note
 
 // The point after which stats cost double
-static constexpr int HIGH_STAT = 12;
+static constexpr int HIGH_STAT = 40;
 
 // The ID of the rightmost tab
 static constexpr int NEWCHAR_TAB_MAX = 7;

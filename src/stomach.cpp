@@ -182,7 +182,8 @@ food_summary stomach_contents::digest( const Character &owner, const needs_rates
     stomach_digest_rates rates = get_digest_rates( metabolic_rates, owner );
 
     // Digest water, but no more than in stomach.
-    digested.water = std::min( water, rates.water * five_mins );
+    // digested.water = std::min( water, rates.water * five_mins );
+    digested.water = std::min( water, rates.water * half_hours );
     water -= digested.water;
 
     // If no half-hour intervals have passed, we only process water, so bail out early.
