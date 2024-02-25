@@ -372,6 +372,7 @@ static const move_mode_id move_mode_walk( "walk" );
 static const mtype_id mon_player_blob( "mon_player_blob" );
 
 static const proficiency_id proficiency_prof_parkour( "prof_parkour" );
+static const proficiency_id proficiency_prof_english( "prof_english" );
 static const proficiency_id proficiency_prof_spotting( "prof_spotting" );
 static const proficiency_id proficiency_prof_traps( "prof_traps" );
 static const proficiency_id proficiency_prof_trapsetting( "prof_trapsetting" );
@@ -11923,8 +11924,9 @@ book_mastery Character::get_book_mastery( const item &book ) const
     const int skill_level = get_knowledge_level( skill );
     const int skill_requirement = type->req;
     const int max_skill_learnable = type->level;
-
-    if( skill_requirement > skill_level ) {
+    const proficiency_id language = type->language;
+    
+    if( skill_requirement > skill_level || !has_proficiency( language ) ) {
         return book_mastery::CANT_UNDERSTAND;
     }
     if( skill_level >= max_skill_learnable ) {

@@ -501,6 +501,10 @@ struct islot_pet_armor {
 
 struct islot_book {
     /**
+     * Which language is this book written in
+     */
+    proficiency_id language;
+    /**
      * Which skill it upgrades, if any. Can be @ref skill_id::NULL_ID.
      */
     skill_id skill = skill_id::NULL_ID();

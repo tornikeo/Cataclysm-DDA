@@ -3174,6 +3174,7 @@ void Item_factory::load_tool_armor( const JsonObject &jo, const std::string &src
 void islot_book::load( const JsonObject &jo )
 {
     optional( jo, was_loaded, "max_level", level, 0 );
+    optional( jo, was_loaded, "language", language, proficiency_id::NULL_ID() );
     optional( jo, was_loaded, "required_level", req, 0 );
     optional( jo, was_loaded, "fun", fun, 0 );
     optional( jo, was_loaded, "intelligence", intel, 0 );

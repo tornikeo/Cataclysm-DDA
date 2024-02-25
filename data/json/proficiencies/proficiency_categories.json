@@ -100,5 +100,11 @@
     "id": "prof_athletics",
     "name": "Athletics",
     "description": "Proficiencies for various athletic activities."
+  },
+  {
+    "type": "proficiency_category",
+    "id": "prof_language",
+    "name": "Language",
+    "description": "Proficiencies for various languages."
   }
 ]

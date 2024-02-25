@@ -234,7 +234,7 @@ using skill_displayType_id = string_id<SkillDisplayType>;
 struct species_type;
 using species_id = string_id<species_type>;
 
-class speed_description;
+class speed_description; 
 using speed_description_id = string_id<speed_description>;
 
 class mood_face;

@@ -102,6 +102,7 @@
 | `prof_parkour`                | Parkour Expert                    | None                                        | You're skilled at clearing obstacles; terrain like railings or counters are as easy for you to move on as solid ground.                                                                                                                                                   |
 | `prof_wound_care`             | Wound Care                        | None                                        | You know how to bandage wounds and understand basic principles of wound care.                                                                                                                                                                                             |
 | `prof_wound_care_expert`      | Wound Care Expert                 | prof_wound_care                             | Your extensive field experience in bandaging and wound care is on par with that of a paramedic.                                                                                                                                                                           |
+| `prof_english`                | English                           | prof_english                                | You know how to communicate in English.                                                                                                                                                                           |
 
 ## Magiclysm proficiencies
 
