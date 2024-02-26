@@ -816,11 +816,11 @@ class map
         */
         // TODO: fix point types (remove the first overload)
         bool furn_set( const tripoint &p, const furn_id &new_furniture, bool furn_reset = false,
-                       bool avoid_creatures = false );
+                       bool avoid_creatures = false, bool is_favorite = false );
         bool furn_set( const tripoint_bub_ms &p, const furn_id &new_furniture,
-                       bool furn_reset = false, bool avoid_creatures = false );
-        bool furn_set( const point &p, const furn_id &new_furniture, bool avoid_creatures = false ) {
-            return furn_set( tripoint( p, abs_sub.z() ), new_furniture, false, avoid_creatures );
+                       bool furn_reset = false, bool avoid_creatures = false, bool is_favorite = false);
+        bool furn_set( const point &p, const furn_id &new_furniture, bool avoid_creatures = false, bool is_favorite = false) {
+            return furn_set( tripoint( p, abs_sub.z() ), new_furniture, false, avoid_creatures, is_favorite );
         }
         void furn_clear( const tripoint &p ) {
             furn_set( p, f_clear );
@@ -846,6 +846,9 @@ class map
 
         int get_map_damage( const tripoint_bub_ms &p ) const;
         void set_map_damage( const tripoint_bub_ms &p, int dmg );
+
+        bool get_map_favorite( const tripoint_bub_ms &p ) const;
+        void set_map_favorite( const tripoint_bub_ms &p, bool is_favorite );
 
         // Return a bitfield of the adjacent tiles which connect to the given
         // connect_group.  From least-significant bit the order is south, east,

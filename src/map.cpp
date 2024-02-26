@@ -1685,7 +1685,7 @@ furn_id map::furn( const tripoint_bub_ms &p ) const
 }
 
 bool map::furn_set( const tripoint &p, const furn_id &new_furniture, const bool furn_reset,
-                    bool avoid_creatures )
+                    bool avoid_creatures, bool is_favorite )
 {
     if( !inbounds( p ) ) {
         debugmsg( "map::furn_set %s out of bounds", p.to_string() );
@@ -1712,6 +1712,7 @@ bool map::furn_set( const tripoint &p, const furn_id &new_furniture, const bool 
 
     current_submap->set_furn( l, new_target_furniture );
     current_submap->set_map_damage( point_sm_ms( l ), 0 );
+    current_submap->set_map_favorite( point_sm_ms( l ), is_favorite );
 
     // Set the dirty flags
     const furn_t &old_f = old_id.obj();
@@ -1799,9 +1800,9 @@ bool map::furn_set( const tripoint &p, const furn_id &new_furniture, const bool 
 }
 
 bool map::furn_set( const tripoint_bub_ms &p, const furn_id &new_furniture, const bool furn_reset,
-                    bool avoid_creatures )
+                    bool avoid_creatures, bool is_favorite )
 {
-    return furn_set( p.raw(), new_furniture, furn_reset, avoid_creatures );
+    return furn_set( p.raw(), new_furniture, furn_reset, avoid_creatures, is_favorite );
 }
 
 bool map::can_move_furniture( const tripoint &pos, Character *you ) const
@@ -1911,6 +1912,36 @@ void map::set_map_damage( const tripoint_bub_ms &p, int dmg )
         return;
     }
     return current_submap->set_map_damage( l, dmg );
+}
+
+bool map::get_map_favorite( const tripoint_bub_ms &p ) const
+{
+    if( !inbounds( p ) ) {
+        return 0;
+    }
+
+    point_sm_ms l;
+    const submap *const current_submap = unsafe_get_submap_at( p, l );
+    if( current_submap == nullptr ) {
+        debugmsg( "Called get_map_damage for unloaded submap" );
+        return 0;
+    }
+    return current_submap->get_map_favorite( l );
+}
+
+void map::set_map_favorite( const tripoint_bub_ms &p, bool is_favorite )
+{
+    if( !inbounds( p ) ) {
+        return;
+    }
+
+    point_sm_ms l;
+    submap *const current_submap = unsafe_get_submap_at( p, l );
+    if( current_submap == nullptr ) {
+        debugmsg( "Called set_map_damage for unloaded submap" );
+        return;
+    }
+    return current_submap->set_map_favorite( l, is_favorite );
 }
 
 uint8_t map::get_known_connections( const tripoint &p,

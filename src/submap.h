@@ -132,7 +132,19 @@ class submap
         }
 
         void set_map_damage( const point_sm_ms &p, int dmg ) {
-            ephemeral_data[p] = { dmg };
+            ephemeral_data[p].damage = dmg;
+        }
+
+        bool get_map_favorite( const point_sm_ms &p ) const {
+            auto it = ephemeral_data.find( p );
+            if( it != ephemeral_data.end() ) {
+                return it->second.is_favorite;
+            }
+            return 0;
+        }
+
+        void set_map_favorite( const point_sm_ms &p, bool is_favorite ) {
+            ephemeral_data[p].is_favorite = is_favorite;
         }
 
         ter_id get_ter( const point &p ) const {
@@ -307,7 +319,8 @@ class submap
         std::unique_ptr<basecamp> camp;  // only allowing one basecamp per submap
 
         struct tile_data {
-            int damage;
+            int damage = 0;
+            bool is_favorite = false;
         };
 
     private:

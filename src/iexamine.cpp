@@ -1591,8 +1591,15 @@ void iexamine::deployed_furniture( Character &you, const tripoint &pos )
                                here.furn( pos ).obj().name() );
     }
 
-    const itype_id furn_item = here.furn( pos ).obj().deployed_item;
-    here.add_item_or_charges( drop_pos, item( furn_item, calendar::turn ) );
+    const auto furn = here.furn( pos ).obj();
+    const auto is_favorite = here.get_map_favorite( tripoint_bub_ms(pos) );
+    auto it = item( furn.deployed_item, calendar::turn );
+    it.set_favorite( is_favorite );
+    // here.add_item_or_charges( drop_pos, it );
+    if ( you.can_wield(it).success() && it.weight() < 10_kilogram ) {
+        you.wield(it);
+    }
+    here.set_map_favorite( tripoint_bub_ms(pos), false );
     here.furn_set( pos, f_null );
 }
 
