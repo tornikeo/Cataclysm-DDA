@@ -119,7 +119,7 @@ ifeq ($(NATIVE), emscripten)
   WARNINGS += -Wno-gnu-zero-variadic-macro-arguments
 endif
 # Uncomment below to disable warnings
-#WARNINGS = -w
+WARNINGS = -w
 DEBUGSYMS = -g
 #PROFILE = -pg
 #OTHERS = -O3
