@@ -113,6 +113,7 @@ enum veh_coll_type : int {
     veh_coll_veh,      // 2 - vehicle
     veh_coll_bashable, // 3 - bashable
     veh_coll_other,    // 4 - other
+    veh_coll_portal,   // 5 - portal (leads to a lot of fun)
     num_veh_coll_types
 };
 

@@ -791,6 +791,10 @@ vehicle *map::move_vehicle( vehicle &veh, const tripoint &dp, const tileray &fac
             if( part_num != -1 ) {
                 if( veh.part( part_num ).info().has_flag( VPFLAG_ROTOR ) ) {
                     veh.damage( *this, part_num, coll_dmg, damage_bash, true );
+                } else if ( coll.type == veh_coll_portal ) {
+                    // We hit a portal. Ouch
+                    // Even worse, we don't get an impulse - it's just cutting the vehicle apart into bits
+                    veh.damage( *this, part_num, 1000, damage_bash );
                 } else {
                     impulse += coll_dmg;
                     veh.damage( *this, part_num, coll_dmg, damage_bash );

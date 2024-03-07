@@ -39,6 +39,7 @@
 #include "veh_type.h"
 #include "vpart_position.h"
 #include "vpart_range.h"
+#include "field_type.h"
 
 #define dbg(x) DebugLog((x),D_MAP) << __FILE__ << ":" << __LINE__ << ": "
 
@@ -934,7 +935,12 @@ veh_collision vehicle::part_collision( int part, const tripoint &p,
         ret.type = veh_coll_bashable;
         terrain_collision_data( p, bash_floor, mass2, part_dens, e );
         ret.target_name = here.disp_name( p );
-    } else if( here.impassable_ter_furn( p ) ||
+    } else if ( here.has_field_at( p, fd_fatigue ) ) {
+        // We ran into dimensional fatigue. This will teleport the offending part randomly around
+        ret.type = veh_coll_portal;
+        return ret;
+    }
+    else if( here.impassable_ter_furn( p ) ||
                ( bash_floor && !here.has_flag( ter_furn_flag::TFLAG_NO_FLOOR, p ) ) ) {
         // not destructible
         ret.type = veh_coll_other;
